@@ -1,0 +1,67 @@
+/* Documento */
+* {
+	margin:0;
+	padding:0;
+}
+
+body{
+  min-height: 100%;
+  top: 0;
+  margin:0;
+  padding:0;
+}
+
+
+header {
+	width:100%;
+}
+
+
+
+footer,
+section#main,
+body{
+    width: 100%;
+    position: absolute;
+}
+
+section#main{
+    min-height: 100%;
+}
+
+footer{
+    background-color: #36A0FF !important;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+}
+
+.carta {
+  margin: 0 auto;
+  float: none;
+}
+
+
+/* IMAGEN PRINCIPAL DE INDEX */
+.contenedor{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.texto-encima{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.centrado{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}

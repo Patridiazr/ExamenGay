@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil</title>
+</head>
+<body>
+    <!-- navbar -->
+    {% include './navbar.html' %}
+    <!-- CONTENIDO -->
+    <H2 style="text-align: center">Bienvenido {{User.username}}</H2><br>
+    <div class="container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre de Usuario</th>
+              <th scope="col">Email</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Ciudad</th>
+              <th scope="col">Comuna</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>{{User.id}}</td>
+              <td>{{User.username}}</td>
+              <td>{{User.email}}</td>
+              <td>{{User.direccion}}</td>
+              <td>{{User.tarjeta}}</td>
+              <td>{{User.banco}}</td>
+              <td>
+                <a class="btn btn-info " href="#editar_u{{u.id}}}">Editar</a>
+                <a class="btn btn-danger" data-toggle="modal" href="#eliminar_u{{u.id}}">Eliminar</a>
+              </td>
+              </div>
+              </tr>
+              </div>
+          </tbody>
+        </table>
+
+    <!-- FOOTER -->
+    {% include './footer.html' %}
+    
+</body>
+</html>
