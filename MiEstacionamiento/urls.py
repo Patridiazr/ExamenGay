@@ -10,6 +10,7 @@ urlpatterns = [
     path('',views.navbar,name="navbar"),
     path('',views.footer,name="footer"),
     path('perfil',views.perfil,name="perfil"),
+    path('estacionamientos',views.estacionamientos,name="estacionamientos"),
 
 
 
@@ -17,11 +18,14 @@ urlpatterns = [
     path('crear_U',views.crear_U, name="crear_U"),
 
     #CRUD VEHICULOS
+    path('crear_V',views.crear_V, name="crear_V"),
+
+    #CRUD ESTACIONAMIENTOS
+    path('crear_E',views.crear_E, name="crear_E"),
+
+    #CRUD USUARIOS
+    path('crear_A',views.crear_A, name="crear_A"),
     
 
-    #LOGIN
-    path('login_iniciar',views.login_iniciar, name="login_iniciar"),
-    path('cerrarsesion', views.cerrar_session, name="cerrar_session"),
-
-
+    
 ]

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estacionamientos</title>
+</head>
+<body>
+        {% include './navbar.html' %}
+        <br>
+
+        <h1 style="text-align: center">Estacionamientos disponibles</h1>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Ubicacion</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7925.399174924268!2d-70.6823673920059!3d-33.36532520481758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7027dd93741%3A0xf2508dc46ed45425!2sDuoc+Plaza+Norte!5e0!3m2!1ses-419!2scl!4v1561518613452!5m2!1ses-419!2scl" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <div class="container">
+        <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Direccion</th>
+                    <th>Comuna</th>
+                    <th>Valor por hora</th>
+                    <th>Pago</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if estacion %}
+                {% for e in estacion %}
+                <tr>
+                    <td>{{e.direccion}}</td>
+                    <td>{{e.comuna}}</td>
+                    <td>{{e.valor}}</td>
+                    <td><a href='https://www.flow.cl/btn.php?token=uhymgqv' target='_blank'>
+                        <img src='https://www.flow.cl/img/botones/btn-pagar-negro.png'>
+                      </a></td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <h4>No existen estacionamientos</h4>
+                {% endif %}
+            </tbody> 
+        </table>
+        </div>
+        </div>
+
+
+
+        {% include './footer.html' %}
+    
+</body>
+</html>
